@@ -5,7 +5,7 @@ pipeline
     {
         stage('checkout'){
             steps{
-                git branch : 'main', url : 'git@github.com:bkeerthi05/Jenkins-Pipeline-Test-Repo.git'
+                git branch : 'main', url : 'https://github.com/bkeerthi05/Jenkins-Pipeline-Test-Repo.git'
             }
         }
         stage('docker version'){
