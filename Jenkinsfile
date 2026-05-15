@@ -15,14 +15,14 @@ pipeline
         }
         stage('docker build'){
             steps{
-                sh 'sudo docker build -t nginx:1 .'
-                sh 'sudo docker images'
+                sh 'docker build -t nginx:1 .'
+                sh 'docker images'
             }
         }
         stage('docker container'){
             steps{
-                sh 'sudo docker run -d -p 8001:80 nginx:1'
-                sh 'sudo docker ps'
+                sh 'docker run -d -p 8001:80 nginx:1'
+                sh 'docker ps'
             }
         }
     }
